@@ -38,7 +38,7 @@ var EndOfTurn = function(game) {
 }
 
 EndOfTurn.prototype = Object.create(State.prototype);
-EndOfTurn.prototype.constructor = State;
+EndOfTurn.prototype.constructor = State; // CityRound?
 
 EndOfTurn.prototype.go = function() {
 	return this.game;
