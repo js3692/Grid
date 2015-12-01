@@ -1,0 +1,38 @@
+$resource-panel-width: 450px;
+$resource-panel-height: 225px;
+$resource-side-tab-width: 30px;
+$resource-side-tab-height: 100px;
+resource-panel {
+    width: 0;
+    height: 0;
+    position: relative;
+    z-index: 200;
+    .resource-slider {
+        float: left;
+        background-color: $main-background;
+        opacity: .8;
+        -webkit-transition: width 2s, height 2s, background-color 1s, -webkit-transform .25s;
+        transition: width 2s, height 2s, background-color 1s, transform .25s;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    .resource-slider-pull {
+        -webkit-transform: translateX(-$resource-panel-width);
+        transform: translateX(-$resource-panel-width);
+    }
+    .menu-tab {
+        width: $resource-side-tab-width;
+        height: $resource-side-tab-height;
+        border-radius: 0 5px 5px 0;
+        border-left: 1px solid white;
+    }
+    .menu-tab:hover {
+        background-color: grey;
+    }
+    .menu-panel-body {
+        height: $resource-panel-height;
+        width: $resource-panel-width;
+        border-radius: 0 0 5px 0;
+        border-width: 0;
+    }
+}

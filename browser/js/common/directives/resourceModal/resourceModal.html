@@ -1,0 +1,13 @@
+<div class='resource-modal'>
+  <div class="glyphicon glyphicon-oil"></div>
+  <hr>
+  <h2> Buy some resources </h2>
+  <div ng-repeat="(resource, color) in resourceColors">
+    {{ resource }}
+    <bid start="0" button-color="color"></bid>
+  </div>
+  <hr>
+  <div>
+    <button class="btn btn-lg">Submit</button>
+  </div>
+</div>

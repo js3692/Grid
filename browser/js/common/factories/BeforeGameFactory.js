@@ -1,6 +1,7 @@
 app.factory('BeforeGameFactory', function ($http, $q) {
+
 	var baseUrl = '/api/grid/before/';
-	var GridFactory = {};
+	var BeforeGameFactory = {};
 	var cachedGrid;
 
 	function toData (response) {
@@ -12,47 +13,47 @@ app.factory('BeforeGameFactory', function ($http, $q) {
 		return grid;
 	}
 
-	function organizePlayersForStart (users){
+	function organizePlayersForStart (users) {
 		return users.map(user => { return { user: user, color: user.color }; });
 	}
 
-	GridFactory.newGame = function (gameSettings) {
-		return $http.post('/api/grid/', gameSettings)
+	BeforeGameFactory.newGame = function (gameSettings) {
+		return $http.post('/api/grid', gameSettings)
 			.then(toData)
 			.then(updateCachedGrid);
 	};
 
-	GridFactory.joinGame = function (gridId) {
+	BeforeGameFactory.joinGame = function (gridId) {
 	return $http.post(baseUrl + gridId + '/join')
 		.then(toData)
 		.then(updateCachedGrid);
 	};
 
-	GridFactory.leaveGame = function (gridId) {
+	BeforeGameFactory.leaveGame = function (gridId) {
 		return $http.post(baseUrl + gridId + '/leave')
 			.then(toData);
 	};
 
-	GridFactory.start = function (gridId, users) {
+	BeforeGameFactory.start = function (gridId, users) {
 		return $http.put(baseUrl + gridId + '/start', organizePlayersForStart(users))
 			.then(toData);
 	};
 
-	GridFactory.fetchOne = function (gridId) {
+	BeforeGameFactory.fetchOne = function (gridId) {
 		return $http.get(baseUrl + gridId)
 			.then(toData);
 	};
 
-	GridFactory.getCachedGrid = function (id) {
-		if(id && !cachedGrid) return GridFactory.fetchOne(id);
+	BeforeGameFactory.getCachedGrid = function (id) {
+		if(id && !cachedGrid) return BeforeGameFactory.fetchOne(id);
 		return $q.resolve(cachedGrid);
 	};
 
-	GridFactory.changeColor = function (id, userId, color) {
+	BeforeGameFactory.changeColor = function (id, userId, color) {
 		return $http.put(baseUrl + id + '/changeColor', { userId: userId, color: color })
 			.then(toData);
 	};
 	
-	return GridFactory;
+	return BeforeGameFactory;
 	
 });

@@ -7,7 +7,7 @@ app.config(function ($stateProvider) {
 			gridId: function ($stateParams) {
                 return $stateParams.id;
             },
-            key: function($stateParams) {
+      key: function($stateParams) {
                 return $stateParams.key;  
             },
 			thePlayer: function(AuthService) {

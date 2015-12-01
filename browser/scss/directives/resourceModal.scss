@@ -1,0 +1,35 @@
+.resource-modal {
+    border-radius: 10px;
+    background-color: $main-background;
+    color: white;
+    font-weight: 100;    
+    hr {
+        border: 1px solid black;
+    }
+    h2 {
+        text-align: center;
+        font-weight: 100;
+    }
+    >div {
+        position: relative;
+        text-align: center;
+    }
+    button.btn.btn-lg,
+    button.btn.btn-lg:hover {
+        font-weight: 100;
+        background-color: $main-background;
+        margin-bottom: 5%;
+        border: 1px solid white;
+    }
+    .glyphicon-oil {
+        color: black;
+        font-size: 5em;
+        display: block;
+        margin: 8px auto;
+    } 
+    
+    bid {
+        display: block;
+        margin: 10px;
+    }
+}

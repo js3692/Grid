@@ -1,52 +1,64 @@
 #grid {
     background: $main-background;
-	color: #ddd;
-	min-height: 100vh;
-	height: 100%;
-	width: 100%;
-	padding-top: 60px;
-  
-  .button-container {
+    color: #ddd;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+
+    .button-container {
       width: 50vh ;
       margin-left: auto ;
       margin-right: auto ;
-  }
-  
-  .color-square {
+    }
+
+    .color-square {
       width: 50px;
       height: 50px;
       display: block;
       float: left;
       margin-right: 10px;
       margin-bottom: 10px;
-       
-      
-  }
 
-  ul {
+
+    }
+
+    ul {
       li {
           clear: both;
       }
-  }
-  .table {
+    }
+    .table {
       border-top: .15em solid $main-background;
       width: 20%;
       margin: 0 auto;
       margin-top: 5%;
       clear: both;
-  }
-  tr {
-    
+    }
+    tr {
+
       th, td {
           text-align: center;
       }
-    
-  }
-  
-  button {
+
+    }
+
+    button {
       margin-top: 10%;
-  }
-  .color-header {
+    }
+    .color-header {
       text-align: left;
-  }
+    }
+    
+    chat {
+        .chat-body {
+            height: 80vh;
+            border: 1px solid black;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            background-color: $main-background;
+            color: white;    
+        }
+        
+    }
 }

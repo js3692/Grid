@@ -33,7 +33,8 @@ router.put('/start', function(req, res, next) {
      
      require('../../../../game/init')(req.body)
         .then(function (newGame) {
-            req.grid.game = newGame;
+            // req.grid.state = new PlantState(newGame);
+            req.grid.game = req.grid.state.go();
             return req.grid.save();
         })
         .then(function(grid){

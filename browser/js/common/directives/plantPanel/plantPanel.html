@@ -1,0 +1,16 @@
+<div ng-click="open()" 
+     class="menu-panel-body
+            panel 
+            panel-default
+            plant-slider
+            plant-slider-pull">
+    <plant ng-style="{ opacity: firstFour($index) }"
+           ng-class="{ plantHover: hover }"
+           ng-mouseover="hover = $index < 4" 
+           ng-mouseleave="hover=false"
+           ng-repeat="plant in plantMarket" 
+           ng-click="bidFor(plant)"
+           plant="plant">
+    </plant>
+</div>
+<div class="plant-slider plant-slider-pull menu-tab" ng-click="open()"><span class="glyphicon glyphicon-off"></span></div>

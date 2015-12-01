@@ -1,6 +1,6 @@
 describe('AuthService', function () {
 
-    beforeEach(module('fsaPreBuilt'));
+    beforeEach(module('Grid'));
 
     var $httpBackend;
     var $rootScope;

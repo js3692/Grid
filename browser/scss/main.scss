@@ -1,30 +1,38 @@
 $main-background: #132330;
-
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background: #fdfdfd;
+    background: #fdfdfd;
 }
 
 @mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 #main {
-  margin: auto;
+    margin: auto;
 }
 
-@import 'directives/main';
+@import 'directives/_main';
 @import 'directives/sidePanel';
 @import 'directives/bottomPanel';
 @import 'directives/graphs/barGraph';
+@import 'directives/resourcePanel';
+@import 'directives/chatPanel';
+@import 'directives/plantPanel';
+@import 'directives/resource';
+@import 'directives/plant';
+@import 'directives/player';
+@import 'directives/bidModal';
+@import 'directives/message';
+@import 'directives/resourceChart';
+@import 'directives/resourceModal';
 @import 'home/main';
 @import 'about/main';
 @import 'tutorial/main';

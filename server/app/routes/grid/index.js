@@ -12,9 +12,9 @@ var User = mongoose.model('User');
 
 router.post('/', function (req, res, next) {
   // req.body has map, max players, and selected regions
-	Grid.create({})
+	Grid.create(req.body)
     .then(function (grid) {
-      return grid.addUser(req.user);
+      return grid.addPlayer(req.user);
     })
     .then(function (grid) {
       return Grid.populate(grid, "users");
@@ -40,6 +40,6 @@ router.param('gridId', function(req, res, next, gridId){
 
 router.use('/before/:gridId', require('./before'));
 
-// router.use('/after/:gridId', require('./after'));
+router.use('/after/:gridId', require('./after'));
 
 module.exports = router;

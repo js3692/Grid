@@ -1,0 +1,14 @@
+<div class="btn-group" role="group">
+    <button type="button" class="btn" ng-style="{ 'background-color': buttonColor }" ng-click="changeBid(-1)" ng-disabled="isMin(bid)">
+        <span class="glyphicon 
+                   glyphicon-minus">
+      </span>
+    </button>
+    <button type="button" class="btn btn-default">
+        <span>{{ bid }}</span>
+    </button>
+    <button type="button" class="btn " ng-style="{ 'background-color': buttonColor }" ng-click="changeBid(1)" ng-disabled="isMax(bid)">
+        <span class="glyphicon glyphicon-plus">
+      </span>
+    </button>
+</div>

@@ -10,4 +10,9 @@ var User = mongoose.model('User');
 
 // Current URL: 'api/play'
 
+router.use('/plantState', require('./plantState'));
+router.use('/resourceState', require('./resourceState'));
+router.use('/cityState', require('./cityState'));
+router.use('/endOfTurn', require('./endOfTurn'));
+
 module.exports = router;

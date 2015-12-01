@@ -1,0 +1,33 @@
+.modal-content {
+    border-radius: 11px;
+    background-color: $main-background;
+}
+
+.bid-modal {
+    border-radius: 10px;
+    background-color: $main-background;
+    color: white;
+    font-weight: 100;
+    img {
+        display: block;
+        margin: 5% auto;
+    }
+    hr {
+        border: 1px solid black;
+    }
+    h2 {
+        text-align: center;
+        font-weight: 100;
+    }
+    >div {
+        position: relative;
+        text-align: center;
+    }
+    button.btn.btn-lg,
+    button.btn.btn-lg:hover {
+        font-weight: 100;
+        background-color: $main-background;
+        margin-bottom: 5%;
+        border: 1px solid white;
+    }
+}

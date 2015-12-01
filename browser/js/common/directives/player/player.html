@@ -1,5 +1,12 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    {{ player.username }}
+      <div class="player-box glyphicon glyphicon-home"
+           ng-style="{ color: player.user.color }">
+          <div class="player-text">{{ player.user.username }}</div>
+      </div>
+      <div class="player-box glyphicon glyphicon-piggy-bank">
+           <div class="player-text">{{ player.money }}</div>
+      </div>
+<!--    {{ player.user.username }} money: {{ player.money }} cities: {{ player.numCities }}-->
   </div>
 </div>

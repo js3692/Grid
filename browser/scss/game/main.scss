@@ -1,20 +1,38 @@
-#gameMap {
-	width: 100%;
-	margin: auto;
+//#gameMap {
+//	width: 100%;
+//	margin: auto;
+//    position: absolute;
+//    left: 0;
+//    top: 0;
+//    z-index: -1;
+//}
+
+//#gameMapTrial {
+//	svg {
+//		position: absolute;
+//
+//	}
+//	.stroke {
+//		fill: none;
+//		stroke: #000;
+//		stroke-width: .5;
+//	}
+//}
+
+.map {
     position: absolute;
-    left: 0;
     top: 0;
-    z-index: -1;
-}
+    left: 0;
 
-#gameMapTrial {
-	svg {
-		position: absolute;
-
-	}
-	.stroke {
-		fill: none;
-		stroke: #000;
-		stroke-width: .5;
-	}
+    .zoom {
+        body {
+            margin: 0;
+        }
+        path {
+            fill: none;
+            stroke: red;
+            stroke-linejoin: round;
+            stroke-width: 1.5px;
+        }
+    }
 }

@@ -24,6 +24,9 @@ app.factory('FirebaseFactory', function($firebaseObject){
                 if(gameObject && gameObject.key === gameKey && !gameObject.game) joinableGames.push(gameObject);  
             }
             return joinableGames;
+        },
+        getChat: function(key){
+            return new Firebase(baseUrl + key + '/chat');
         }
     };
 }); 

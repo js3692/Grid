@@ -8,7 +8,7 @@ module.exports = function (config) {
         'node_modules/angular-animate/angular-animate.js',
         'node_modules/angular-ui-router/release/angular-ui-router.js',
         'node_modules/angular-ui-bootstrap/ui-bootstrap.js',
-        'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js',
+        'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js', 
         'node_modules/socket.io-client/socket.io.js',
         'public/main.js',
         'node_modules/sinon/pkg/sinon.js',
@@ -17,7 +17,9 @@ module.exports = function (config) {
     ];
 
     var excludeFiles = [
-        'tests/browser/karma.conf.js'
+        'tests/browser/karma.conf.js',
+        'tests/browser/fsa-prebuilt/auth-service-test.js',
+        'tests/browser/fsa-prebuilt/session-test.js'
     ];
 
     var configObj = {

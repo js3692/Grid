@@ -1,0 +1,13 @@
+<div id="chat-window" class="panel-body
+                             chat-body">
+  <message message="m" chat-box="chatBox    "
+    ng-repeat="m in chatHistory">
+  </message>
+</div>
+
+<form ng-submit="addToChat(message)">
+  <input type="text" 
+         class="form-control" 
+         ng-model="message" 
+         aria-describedby="chat bar">
+</form>
